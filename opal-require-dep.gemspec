@@ -2,7 +2,7 @@
 require File.expand_path('../lib/opal/require_dep/version', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name = 'opal_require_dep'
+  s.name = 'opal-require-dep'
   s.version = Opal::RequireDep::VERSION
   s.author = 'Brady Wied'
   s.email = 'brady@bswtechconsulting.com'
