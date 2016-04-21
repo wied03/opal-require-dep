@@ -2,6 +2,7 @@ Bundler::GemHelper.install_tasks
 
 require 'opal/rspec/rake_task'
 require 'rspec/core/rake_task'
+require 'opal-require-dep'
 
 desc 'Run integration specs'
 Opal::RSpec::RakeTask.new(:'spec:integration') do |server, task|
