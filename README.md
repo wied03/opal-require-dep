@@ -12,10 +12,22 @@ gem 'opal-require-dep'
 
 ### Use in your application
 
-Either rely on Bundler.require or do this on the MRI side:
+If you use Rails or `Bundler.require`, you don't need to do anything but add to your Gemfile.
+
+If you don't use either of those, then do this on the MRI side:
 
 ```ruby
 require 'opal-require-dep'
+```
+
+If you use [opal-webpack](https://github.com/cj/opal-webpack), then, until [this issue](https://github.com/cj/opal-webpack/issues/31) is resolved, you'll need to do something like this in your webpack config:
+```js
+const env = process.env
+const path = require('path')
+
+const requireDepLoadPath = path.join(require('child_process').execSync("ruby -e \"puts Gem::Specification.find_by_name('opal-require-dep').gem_dir\"").toString().trim(), 'lib')
+env.OPAL_COMPILER_LOAD_PATH = requireDepLoadPath
+env.OPAL_COMPILER_REQUIRES = path.join(requireDepLoadPath, 'opal-require-dep')
 ```
 
 Then you can use `require_dependency` in your Opal files that you share with rails and it will function as an alias of
