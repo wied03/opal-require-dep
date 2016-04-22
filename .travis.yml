@@ -3,6 +3,8 @@ sudo: false
 
 cache:
   bundler: true
+  directories:
+    - phantom20
 
 rvm:
   - 2.2.4
@@ -10,6 +12,17 @@ rvm:
 gemfile:
   - gemfiles/opal_master.gemfile
   - gemfiles/opal_0.9.gemfile
+
+before_install:
+  - "mkdir -p phantom20"
+  - "export PATH=`pwd`/phantom20:$PATH"
+  - "echo $PATH"
+  - "pushd ."
+  - "cd phantom20"
+  - "ls phantom20/phantomjs || curl -L -O https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2"
+  - "ls phantom20/phantomjs || tar xjvf phantomjs-2.0.0-ubuntu-12.04.tar.bz2"
+  - "rm -rf phantomjs-2.0.0-ubuntu-12.04.tar.bz2"
+  - "popd"
 
 before_script:
   - "bundle exec ruby util/git_modules.rb"
