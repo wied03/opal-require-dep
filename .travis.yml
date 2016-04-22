@@ -10,6 +10,3 @@ rvm:
 gemfile:
   - gemfiles/opal_master
   - gemfiles/opal_0.9
-
-before_script:
-  - "bundle exec ruby util/git_modules.rb"
