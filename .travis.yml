@@ -8,5 +8,8 @@ rvm:
   - 2.2.4
 
 gemfile:
-  - gemfiles/opal_master
-  - gemfiles/opal_0.9
+  - gemfiles/opal_master.gemfile
+  - gemfiles/opal_0.9.gemfile
+
+before_script:
+  - "bundle exec ruby util/git_modules.rb"
