@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.email = 'brady@bswtechconsulting.com'
   s.summary = 'require_dependency shim for Opal'
   s.description = 'Adds an Opal synonym for require_dependency (to require) to play nice with Rails autoload in isomorphic code'
+  s.homepage = 'https://github.com/wied03/opal-require-dep'
 
   s.files = Dir.glob('lib/**/*.rb')
 
