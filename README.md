@@ -1,6 +1,7 @@
 # opal-require-dep
 
 [![Build Status](http://img.shields.io/travis/wied03/opal-require-dep/master.svg?style=flat)](http://travis-ci.org/wied03/opal-require-dep)
+[![Version](http://img.shields.io/gem/v/opal-require-dep.svg?style=flat-square)](https://rubygems.org/gems/opal-require-dep)
 
 ## Usage
 
