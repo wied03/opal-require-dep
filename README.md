@@ -31,7 +31,7 @@ env.OPAL_COMPILER_LOAD_PATH = requireDepLoadPath
 env.OPAL_COMPILER_REQUIRES = path.join(requireDepLoadPath, 'opal-require-dep')
 ```
 
-Then you can use `require_dependency` in your Opal files that you share with rails and it will function as an alias of
+Then you can use `require_dependency` in your Opal files that you share with Rails and it will function as an alias of
 `require` in Opal
 
 ## Contributing
