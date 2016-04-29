@@ -3,6 +3,10 @@
 [![Build Status](http://img.shields.io/travis/wied03/opal-require-dep/master.svg?style=flat)](http://travis-ci.org/wied03/opal-require-dep)
 [![Version](http://img.shields.io/gem/v/opal-require-dep.svg?style=flat-square)](https://rubygems.org/gems/opal-require-dep)
 
+## Why
+
+If you share code between Rails and Opal, you may run into issues where the explicit requires that Opal (like Ruby without Rails) uses conflict with Rails autoload. There is a solution that has nothing to do with Opal called `require_dependency.` In Rails, it's ignored and autoloading proceeds as normal. The only problem left is that Opal doesn't know `require_dependency` is really an alias of `require.` This fixes that problem.
+
 ## Usage
 
 Add `opal-require-dep` to your Gemfile:
